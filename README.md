@@ -1,2 +1,3 @@
-# 09-Juicy-Breakout
-A "juicy" version of the game Breakout. Instead of one level with five rows of bricks, there are now multiple levels, each with different powerups and ways to play the game.
+An implementation of the Breakout game. This version should work
+like normal, including 3 lives that decrease when you lose the ball
+and a game over screen.
