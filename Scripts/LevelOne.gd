@@ -1,12 +1,14 @@
 extends Node
 
-export var score = 1000
-export var lives = 2
+export var score = 0
+export var lives = 3
 export var tempLives = 0
-export var bricks = 66
+export var bricks = 33
 signal lifeDecrease
 
 var new_ball = preload("res://Scenes/Ball.tscn")
+
+signal explode
 
 onready var BallNode = get_node("/root/World/Ball")
 onready var PaddleNode = get_node("/root/World/Paddle")
@@ -19,7 +21,7 @@ func increase_score(s):
  bricks -= 1
  find_node("Score").update_score()
  if bricks <= 0:
-   get_tree().change_scene("res://Scenes/LevelThree.tscn")
+   get_tree().change_scene("res://Scenes/LevelTwo.tscn")
  
 func decrease_lives():
  if tempLives == 0:

@@ -10,11 +10,17 @@ func _physics_process(delta):
  var mouse_x = get_viewport().get_mouse_position().x
  position = Vector2(mouse_x, position.y)
 
-func lifeHelper():
+func lifeTracker():
    livesHelper += 2
 
 func lifeSub():
    livesHelper -= 1
+
+func lengthen():
+   var trans = get_node("/root/World/Paddle/Sprite")
+   var sha = get_node("/root/World/Paddle/CollisionShape2D")
+   trans.set_scale(Vector2(0.4, 0.5))
+   sha.set_scale(Vector2(0.4, 0.5))
 
 func _input(event):
  if event is InputEventMouseButton and event.pressed:
